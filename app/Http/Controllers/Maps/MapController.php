@@ -17,6 +17,10 @@ class MapController extends Controller
 
         GMaps::initialize($config);
 
+        $marker['position'] = 'Air Canada Center, Toronto';
+        $marker['infowindow_content'] = 'info about air canada';
+        GMaps::add_marker($marker);
+
         $map = GMaps::create_map();
 
         return view('maps.index', compact('map'));
