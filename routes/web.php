@@ -15,5 +15,5 @@ Route::group(['prefix' => 'auth'], function () {
  * Map
  */
 Route::group(['prefix' => 'maps'], function () {
-
+    Route::get('/', 'Maps\MapController@index');
 });
