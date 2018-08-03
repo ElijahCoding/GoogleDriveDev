@@ -13,7 +13,13 @@ class MapController extends Controller
         $config['center'] = 'Air Canada Center, Toronto';
         $config['zoom'] = '14';
         $config['map_height'] = '500px';
+        $config['geocodeCaching'] = true;
         $config['scrollwheel'] = false;
+
+        $config['directions'] = true;
+        $config['directionsStart'] = 'Air Canada Centre, Toronto';
+        $config['directionsEnd'] = 'Yorkdale, Toronto';
+        $config['directionsDivID'] = 'directionsDiv';
 
         GMaps::initialize($config);
 

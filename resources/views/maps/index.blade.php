@@ -13,6 +13,9 @@
 
                     <div class="card-body">
                         {!! $map['html'] !!}
+                        <div id="directionsDiv">
+
+                        </div>
                     </div>
                 </div>
             </div>

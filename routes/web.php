@@ -14,6 +14,11 @@ Route::group(['prefix' => 'auth'], function () {
 /**
  * Map
  */
-Route::group(['prefix' => 'maps'], function () {
-    Route::get('/', 'Maps\MapController@index');
-});
+ Route::group(['middleware' => 'auth'], function () {
+
+     Route::group(['prefix' => 'maps'], function () {
+         Route::get('/', 'Maps\MapController@index')->name('maps.index');
+         // Route::get('/', 'Maps\MapController@index')->name('maps.show');
+     });
+
+ });
